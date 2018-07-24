@@ -328,7 +328,6 @@ body{
 	height: auto;
 	margin: 0 auto;
 	position: relative;
-    z-index: 100;
 }
 .home-first .home-hero .banner .waper{
 	width: 1226px;
@@ -341,7 +340,7 @@ body{
 	position: absolute;
 	left: 0;
 	top: 0;
-    z-index: 100;
+    z-index: 5;
 }
 .home-first .home-hero .banner .waper a img{
     width: 1226px;
@@ -355,7 +354,7 @@ body{
 	position: absolute;
 	left: 0;
 	top: 0;
-    z-index: 9999;
+	z-index: 100;
 }
 .home-first .home-hero .banner .aside ul{
 	width: 234px;

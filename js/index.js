@@ -48,6 +48,50 @@ window.onload=function () {
             cardright[i].style.display= "none";
         }
     }
+    // 轮播图效果
+    let home=document.getElementsByClassName("home-first")[0];
+    let banner=home.getElementsByClassName("banner")[0];
+    let wraper=home.getElementsByClassName("waper")[0];
+    let back=home.getElementsByClassName("ui-prev")[0];
+    let forward=home.getElementsByClassName("ui-next")[0];
+    let lis=wraper.getElementsByTagName("a");
+    let num=0;
+    let t=setInterval(move,3000);
+    function move(){
+        num++;
+        if(num==lis.length){
+            num=0;
+        }
+        for(let j=0;j<lis.length;j++){
+            lis[j].style.zIndex=5;
+        }
+        lis[num].style.zIndex=10;
+    }
+    banner.onmouseenter=function(){
+        clearInterval(t);
+    }
+    banner.onmouseleave=function(){
+        t=setInterval(move,3000);
+    }
+    function move1(){
+        num--;
+        if(num<0){
+            num=lis.length-1;
+        }
+        for(let j=0;j<lis.length;j++){
+            lis[j].style.zIndex=5;
+        }
+        lis[num].style.zIndex=10;
+    }
+    back.onclick=function(){
+        move1();
+    }
+    forward.onclick=function(){
+        move();
+    }
+
+
+    
     //封装函数实现家电，智能...的选项卡
     function Tabs(item) {
         let list=item.getElementsByTagName("li");
@@ -79,5 +123,6 @@ window.onload=function () {
     let item5=document.getElementsByClassName("zhoubian")[0];
     Tabs(item5);
 }
+
 
 
