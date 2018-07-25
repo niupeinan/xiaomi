@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<title>小米</title>
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<script src="js/animate.js"></script>
 	<script src="js/index.js"></script>
 	<link rel="shortcut icon" href="img/mi-logo.png">
-	<link rel="stylesheet" href="https://at.alicdn.com/t/font_654965_7l0ewaqchxna5rk9.css">
+	<link rel="stylesheet" href="https:////at.alicdn.com/t/font_762028_pig45rqhhr.css">
 </head>
 <body>
 	<!--导航部分开始-->
@@ -603,7 +605,7 @@
 		<div class="home-hero">
 			<div class="banner">
 				<div class="waper">
-					<a href="javascript:;" style="z-index: 10">
+					<a href="javascript:;" style="left:0">
 						<img src="img/lunbotu/banner5.jpg" alt="">
 					</a>
 					<a href="">
@@ -1633,10 +1635,10 @@
 						</li>
 					</ul>
 				</div>
-				<div class="ui-prev"></div>
-				<div class="ui-next"></div>
+				<div class="uiprev"></div>
+				<div class="uinext"></div>
 				<div class="btns">
-					<div class="btn"></div>
+					<div class="btn hot"></div>
 					<div class="btn"></div>
 					<div class="btn"></div>
 					<div class="btn"></div>
@@ -1673,10 +1675,14 @@
 		</div>
 		<!--闪购开始-->
 		<div class="flash-shop">
-			<div class="box-hd">
-				<h2>小米闪购</h2>			
+			<div class="boxhd">
+				<h2>小米闪购</h2>
+				<div class="btn">
+					<button>&lt;</button>
+					<button>&gt;</button>
+				</div>		
 			</div>
-			<div class="box-bd">
+			<div class="boxbd">
 				<div class="left">
 					<h3>00:00&nbsp;场</h3>
 					<img src="img/shangou/shandian.png" alt="">
@@ -1690,30 +1696,56 @@
 					</div>
 				</div>
 				<div class="right">
-					<a href="" class="imgbox" style="border-top: 1px solid #FFAC13">
-						<img src="img/shangou/shangou1.png" alt="" width="160" height="160">
-						<h3 style="color: #333">米家空气净化器Pro 白色</h3>
-						<h4>dakongjian,块循环</h4>
-						<h5>1399元&nbsp;<del style="color: #B0B0B0">1499元</del></h5>
-					</a>
-					<a href="" class="imgbox" style="border-top: 1px solid #83C44E">
-						<img src="img/shangou/shangou2.png" alt="" width="160" height="160">
-						<h3 style="color: #333">小米手环 2 黑色</h3>
-						<h4>OLED 显示屏，触摸操作</h4>
-						<h5>142元&nbsp;<del style="color: #B0B0B0">149元</del></h5>
-					</a>
-					<a href="" class="imgbox" style="border-top: 1px solid #2196F3">
-						<img src="img/shangou/shangou3.png" alt="" width="160" height="160">
-						<h3 style="color: #333">空气净化器滤芯 除甲醛增强版</h3>
-						<h4>阻挡细菌，有效去除甲醛</h4>
-						<h5>159元&nbsp;<del style="color: #B0B0B0">169元</del></h5>
-					</a>
-					<a href="" class="imgbox" style="border-top: 1px solid #E53935">
-						<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
-						<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
-						<h4>航空系铝镁合金</h4>
-						<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
-					</a>
+					<div class="rightbox">
+						<a href="" class="imgbox" style="border-top: 1px solid #FFAC13">
+							<img src="img/shangou/shangou1.png" alt="" width="160" height="160">
+							<h3 style="color: #333">米家空气净化器Pro 白色</h3>
+							<h4>dakongjian,块循环</h4>
+							<h5>1399元&nbsp;<del style="color: #B0B0B0">1499元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #83C44E">
+							<img src="img/shangou/shangou2.png" alt="" width="160" height="160">
+							<h3 style="color: #333">小米手环 2 黑色</h3>
+							<h4>OLED 显示屏，触摸操作</h4>
+							<h5>142元&nbsp;<del style="color: #B0B0B0">149元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #2196F3">
+							<img src="img/shangou/shangou3.png" alt="" width="160" height="160">
+							<h3 style="color: #333">空气净化器滤芯 除甲醛增强版</h3>
+							<h4>阻挡细菌，有效去除甲醛</h4>
+							<h5>159元&nbsp;<del style="color: #B0B0B0">169元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #E53935">
+							<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
+							<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
+							<h4>航空系铝镁合金</h4>
+							<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #E53935">
+							<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
+							<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
+							<h4>航空系铝镁合金</h4>
+							<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #E53935">
+							<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
+							<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
+							<h4>航空系铝镁合金</h4>
+							<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #E53935">
+							<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
+							<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
+							<h4>航空系铝镁合金</h4>
+							<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
+						</a>
+						<a href="" class="imgbox" style="border-top: 1px solid #E53935">
+							<img src="img/shangou/shangou4.png" alt="" width="160" height="160">
+							<h3 style="color: #333">90分金属旅行箱 20寸 银色</h3>
+							<h4>航空系铝镁合金</h4>
+							<h5>1709元&nbsp;<del style="color: #B0B0B0">1799元</del></h5>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1813,7 +1845,7 @@
 						<ul>
 							<li>
 								热门
-								<div class="navunder">
+						<div class="navunder">
 									<div class="right">
 										<div class="box">
 											<a class="imgbox" href=""><img src="img/homeelec/homeelec3.jpg" width="150" height="150" alt="哎呀，出错了！"></a>
@@ -4339,56 +4371,181 @@
 				<div class="title">
 					内容
 				</div>
-				<ul class="content-list">
+				<ul class="contentlist">
 					<li style="border-top: 1px solid #FFAC13;">
-						<h2>图书</h2>
-						<a href="" class="text1">哈利·波特与被诅咒的孩子</a>
-						<a href="" class="text2">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！ </a>
-						<a href="" class="text3">29.37元</a>
-						<a href="" style="display: block;"><img src="img/neirong/neirong1.png" alt="" width="216" height="154"></a>
+						<div class="wapper">
+							<div class="son">
+								<h2>图书</h2>
+								<a href="" class="text1">哈利·波特与被诅咒的孩子</a>
+								<a href="" class="text2">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！ </a>
+								<a href="" class="text3">29.37元</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong1.png" alt="" width="216" height="154"></a>
+							</div>
+							<div class="son">
+								<h2>图书</h2>
+								<a href="" class="text1">好吗好的</a>
+								<a href="" class="text2">“畅销作家大冰2016年新书！讲给你听，好吗好的！ </a>
+								<a href="" class="text3">17.99元</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong1.1.png" alt="" width="216" height="154"></a>
+							</div>
+							<div class="son">
+								<h2>图书</h2>
+								<a href="" class="text1">海量好书，享受精品阅读时光，漂亮的中文排版千万读者选择！</a>
+								<a href="" class="text2"></a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong1.2.jpg" alt="" width="216" height="154"></a>	
+							</div>
+						</div>
 						<div class="box">
+							<div class="spot" style="background: white"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
-							<div class="spot"></div>
+						</div>
+						<div class="dayu">
+							<span class="iconfont icon-dayuhao"></span>
+						</div>
+						<div class="xiaoyu">
+							<span class="iconfont icon-dayuhao1"></span>
 						</div>
 					</li>
 					<li style="border-top: 1px solid #96CC6A;">
-						<h2 style="color: #83c44e">MIUI 主题</h2>
-						<a href="" class="text1">复仇者联盟3</a>
-						<a href="" class="text2">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a>
-						<a href="" class="text3">5.2米币</a>
-						<a href="" style="display: block;"><img src="img/neirong/neirong2.png" alt="" width="216" height="154"></a>
-						<div class="box_">
+						<div class="wapper">
+							<div class="son">
+								<h2 style="color: #83c44e">MIUI 主题</h2>
+								<a href="" class="text1">复仇者联盟3</a>
+								<a href="" class="text2">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a>
+								<a href="" class="text3">5.2米币</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong2.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #83c44e">MIUI 主题</h2>
+								<a href="" class="text1">复仇者联盟3</a>
+								<a href="" class="text2">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a>
+								<a href="" class="text3">5.2米币</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong2.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #83c44e">MIUI 主题</h2>
+								<a href="" class="text1">复仇者联盟3</a>
+								<a href="" class="text2">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a>
+								<a href="" class="text3">5.2米币</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong2.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #83c44e">MIUI 主题</h2>
+								<a href="" class="text1">复仇者联盟3</a>
+								<a href="" class="text2">漫威电影宇宙10周年，定制主题上线！漫威粉丝不容错过！</a>
+								<a href="" class="text3">5.2米币</a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong2.png" alt="" width="216" height="154"></a>
+								
+							</div>
+						</div>
+						<div class="box">
+							<div class="spot" style="background-color: white"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
-							<div class="spot"></div>
+						</div>
+						<div class="dayu">
+							<span class="iconfont icon-dayuhao"></span>
+						</div>
+						<div class="xiaoyu">
+							<span class="iconfont icon-dayuhao1"></span>
 						</div>
 					</li>
 					<li style="border-top: 1px solid #E53935;">
-						<h2 style="color: #e53935">游戏</h2>
-						<a href="" class="text1">剑侠世界2</a>
-						<a href="" class="text2">潮流武侠，炫动江湖！</a>
-						<a href="" class="text3"></a>
-						<a href="" style="display: block;"><img src="img/neirong/neirong3.png" alt="" width="216" height="154"></a>
-						<div class="box_">
-							<div class="spot"></div>
+						<div class="wapper">
+							<div class="son">
+								<h2 style="color: #e53935">游戏</h2>
+								<a href="" class="text1">剑侠世界2</a>
+								<a href="" class="text2">潮流武侠，炫动江湖！</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong3.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #e53935">游戏</h2>
+								<a href="" class="text1">剑侠世界2</a>
+								<a href="" class="text2">潮流武侠，炫动江湖！</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong3.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #e53935">游戏</h2>
+								<a href="" class="text1">剑侠世界2</a>
+								<a href="" class="text2">潮流武侠，炫动江湖！</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong3.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<h2 style="color: #e53935">游戏</h2>
+								<a href="" class="text1">剑侠世界2</a>
+								<a href="" class="text2">潮流武侠，炫动江湖！</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong3.png" alt="" width="216" height="154"></a>
+								
+							</div>
+						</div>
+						<div class="box">
+							<div class="spot" style="background-color: white"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
 						</div>
+						<div class="dayu">
+							<span class="iconfont icon-dayuhao"></span>
+						</div>
+						<div class="xiaoyu">
+							<span class="iconfont icon-dayuhao1"></span>
+						</div>
 					</li>
 					<li style="border-top: 1px solid #44A6F3;">
-						<h2 style="color: #2196f3">应用</h2>
-						<a href="" class="text1">2017金米奖</a>
-						<a href="" class="text2">最优秀的应用和游戏</a>
-						<a href="" class="text3"></a>
-						<a href="" style="display: block;"><img src="img/neirong/neirong4.png" alt="" width="216" height="154"></a>
-						<div class="box_">
+						<div class="wapper">
+							<div class="son">
+								<h2 style="color: #2196f3">应用</h2>
+								<a href="" class="text1">2017金米奖</a>
+								<a href="" class="text2">最优秀的应用和游戏</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong4.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<a href="" class="text1">2017金米奖</a>
+								<a href="" class="text2">最优秀的应用和游戏</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong4.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<a href="" class="text1">2017金米奖</a>
+								<a href="" class="text2">最优秀的应用和游戏</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong4.png" alt="" width="216" height="154"></a>
+								
+							</div>
+							<div class="son">
+								<a href="" class="text1">2017金米奖</a>
+								<a href="" class="text2">最优秀的应用和游戏</a>
+								<a href="" class="text3"></a>
+								<a href="" style="display: block;"><img src="img/neirong/neirong4.png" alt="" width="216" height="154"></a>	
+							</div>
+						</div>
+						<div class="box">
+							<div class="spot" style="background: white"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
 							<div class="spot"></div>
-							<div class="spot"></div>
+						</div>
+						<div class="dayu">
+							<span class="iconfont icon-dayuhao"></span>
+						</div>
+						<div class="xiaoyu">
+							<span class="iconfont icon-dayuhao1"></span>
 						</div>
 					</li>
 				</ul>
@@ -4505,11 +4662,11 @@
 	<!--更多服务开始-->
 	<div class="site-footer">
 		<div class="top">
-			<li><a href="https://www.mi.com/static/fast/"><span class="iconfont icon-editor2" style="font-size: 19px;"></span>预约维修服务</a></li>
-			<li><a href="https://www.mi.com/service/exchange/#back"><span class="iconfont icon-7tiantuihuan" style="font-size: 19px;"></span>7天无理由退货</a></li>
-			<li><a href="https://www.mi.com/service/exchange/#back"><span class="iconfont icon-15tianwuliyoutuihuo" style="font-size: 19px;"></span>15天免费换货</a></li>
-			<li><a href="https://www.mi.com/service/buy/postage/"><span class="iconfont icon-gifs" style="font-size: 19px;"></span>满150元包邮</a></li>
-			<li><a href="https://www.mi.com/static/maintainlocation/"><span class="iconfont icon-dingwei" style="font-size: 19px;"></span>520余家售后网点</a></li>
+			<li><a href="https://www.mi.com/static/fast/"><span class="iconfont icon-buoumaotubiao46" style="font-size: 19px;"></span>预约维修服务</a></li>
+			<li><a href="https://www.mi.com/service/exchange/#back"><span class="iconfont icon-sevenday" style="font-size: 19px;"></span>7天无理由退货</a></li>
+			<li><a href="https://www.mi.com/service/exchange/#back"><span class="iconfont icon-shiwutianhuanhuo" style="font-size: 19px;"></span>15天免费换货</a></li>
+			<li><a href="https://www.mi.com/service/buy/postage/"><span class="iconfont icon-man150yuanbaoyou24px" style="font-size: 19px;"></span>满150元包邮</a></li>
+			<li><a href="https://www.mi.com/static/maintainlocation/"><span class="iconfont icon-520jiashouhouwangdian24px" style="font-size: 19px;"></span>520余家售后网点</a></li>
 		</div>
 		<div class="bottom">
 			<div class="left">

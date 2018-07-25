@@ -328,6 +328,7 @@ body{
 	height: auto;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 .home-first .home-hero .banner .waper{
 	width: 1226px;
@@ -338,9 +339,9 @@ body{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	left: 0;
+	left: 1226px;
 	top: 0;
-    z-index: 5;
+	overflow: hidden;
 }
 .home-first .home-hero .banner .waper a img{
     width: 1226px;
@@ -438,7 +439,7 @@ body{
 	float: right;
 	font-size: 15px;
 }
-.home-first .home-hero .banner .ui-prev ,.banner .ui-next{
+.home-first .home-hero .banner .uiprev ,.banner .uinext{
 	width: 41px;
 	height: 69px;
 	background-image: url("../img/lunbotu/icon-slides.png");
@@ -449,17 +450,17 @@ body{
 	margin: auto 0;
 	z-index: 100;
 }
-.home-first .home-hero .banner .ui-prev{
+.home-first .home-hero .banner .uiprev{
 	background-position: -83px;
 	left: 234px;
 }
-.home-first .home-hero .banner .ui-prev:hover{
+.home-first .home-hero .banner .uiprev:hover{
 	background-position: 0px;
 }
-.home-first .home-hero .banner .ui-next{
+.home-first .home-hero .banner .uinext{
 	background-position: -123px;
 }
-.home-first .home-hero .banner .ui-next:hover{
+.home-first .home-hero .banner .uinext:hover{
 	background-position: -41px;
 }
 .home-first .home-hero .banner .btns{
@@ -479,9 +480,12 @@ body{
     float: left;
     background-color: #8F8D88;
 }
-.home-first .home-hero .banner .btns .btn:hover{
+.home-first .home-hero .banner .btns .btn.hot{
 	background-color: #fff;
 }
+/* .home-first .home-hero .banner .btns .btn:first-child{
+	background-color: #fff;
+} */
 .home-first .home-hero .sub-row{
 	width: 1226px;
 	height: 170px;
@@ -583,12 +587,13 @@ body{
 	text-align: center;
 	margin-top: 20px;
 }
-.home-first .flash-shop .box-hd{
+.home-first .flash-shop .boxhd{
 	width: 1226px;
 	height: 58px;
 	font-weight: 200;
+	position: relative;
 }
-.home-first .flash-shop .box-hd h2{
+.home-first .flash-shop .boxhd h2{
 	width: auto;
 	height: 58px;
 	font-size: 22px;
@@ -597,20 +602,39 @@ body{
 	color: #333;
 	font-weight: 200;
 }
-.home-first .flash-shop .box-hd span{
+.home-first .flash-shop .boxhd .btn{
+	width: 72px;
+	height: 24px;
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+}
+.home-first .flash-shop .boxhd .btn button{
+	width: 36px;
+	height: 24px;
+	float: left;
+	background-color: white;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+}
+.btn button:first-child{
+	border-right: 0;
+}
+.home-first .flash-shop .boxhd span{
 	font-size: 28px;
 	float: right;
 	line-height: 58px;
 }
-.home-first .flash-shop .box-hd span:nth-child(2):hover{
+.home-first .flash-shop .boxhd span:nth-child(2):hover{
 	color: #ff6700;
 }
-.home-first .flash-shop .box-bd{
+.home-first .flash-shop .boxbd{
 	width: 100%;
 	height: 340px;
 	float: left;
+	position: relative;
 }
-.home-first .flash-shop .box-bd .left{
+.home-first .flash-shop .boxbd .left{
 	width: 234px;
 	height: 300px;
 	text-align: center;
@@ -620,7 +644,7 @@ body{
 	background: #F1EDED;
 	float: left;
 }
-.home-first .flash-shop .box-bd .left h3{
+.home-first .flash-shop .boxbd .left h3{
 	width: 234px;
 	height: 31px;
 	padding-top: 15px;
@@ -629,26 +653,26 @@ body{
 	font-weight: normal;
 }
 
-.home-first .flash-shop .box-bd .left img{
+.home-first .flash-shop .boxbd .left img{
 	display: block;
 	width: 34px;
 	height: 53px;
 	margin: 25px 100px;
 }
-.home-first .flash-shop .box-bd .left h4{
+.home-first .flash-shop .boxbd .left h4{
 	width: 234px;
 	height: 22px;
 	font-size: 15px;
 	color: rgba(0,0,0,0.54);
 	font-weight: normal;
 }
-.home-first .flash-shop .box-bd .left .countdown{
+.home-first .flash-shop .boxbd .left .countdown{
 	width: 168px;
     margin: 28px 33px 0 33px;
 	height: 46px;
 	float: left;
 }
-.home-first .flash-shop .box-bd .left .countdown .box{
+.home-first .flash-shop .boxbd .left .countdown .box{
 	width: 46px;
 	height: 46px;
 	float: left;
@@ -657,7 +681,7 @@ body{
 	font-size: 23px;
 	color: #fff;
 }
-.home-first .flash-shop .box-bd .left .countdown .dosh{
+.home-first .flash-shop .boxbd .left .countdown .dosh{
 	width: 15px;
 	height: 46px;
 	float: left;
@@ -665,31 +689,39 @@ body{
 	font-size: 23px;
 	color: #605751;
 }
-.home-first .flash-shop .box-bd .right{
+.home-first .flash-shop .boxbd .right{
 	width: 992px;
 	height: 339px;
-	float: right;
+	position: absolute;
+	top: 0;
+	left: 248px;
+	overflow: hidden;
 }
-.home-first .flash-shop .box-bd .right .imgbox{
+.home-first .flash-shop .boxbd .right .rightbox{
+	width: 1970px;
+	height: 339px;
+}
+.home-first .flash-shop .boxbd .right .imgbox{
 	width: 234px;
 	height: 300px;
-	margin-left: 14px;
+	margin-right: 14px;
 	padding-top: 39px;
 	background: #fafafa;
 	float: left;
+	transition: all .5s;
 }
-.home-first .flash-shop .box-bd .right .imgbox:last-child{
+.home-first .flash-shop .boxbd .right .imgbox:last-child{
 	margin-right: 0;
 }
-.home-first .flash-shop .box-bd .right .imgbox img{
+.home-first .flash-shop .boxbd .right .imgbox img{
 	margin: 0 auto;
 }
-.home-first .flash-shop .box-bd .right .imgbox h3{
+.home-first .flash-shop .boxbd .right .imgbox h3{
 	font-size: 14px;
 	font-weight: 400;
     margin-top: 20px;
 }
-.home-first .flash-shop .box-bd .right .imgbox h4{
+.home-first .flash-shop .boxbd .right .imgbox h4{
 	height: 18px;
 	font-size: 10px;
 	font-weight: normal;
@@ -697,7 +729,7 @@ body{
 	margin: 6px 10px 10px;
 	color: #B0B0B0
 }
-.home-first .flash-shop .box-bd .right .imgbox h5{
+.home-first .flash-shop .boxbd .right .imgbox h5{
 	font-size: 13px;
 	font-weight: normal;
 	margin: 10px 10px 13px;
@@ -1825,29 +1857,69 @@ body{
 	line-height: 58px;
 	font-weight: 200;
 }
-.home-main .container .content .content-list{
+.home-main .container .content .contentlist{
 	width: 100%;
 	height: 420px;
+	position: relative;
 }
-.home-main .container .content .content-list li{
+.home-main .container .content .contentlist li{
 	width: 296px;
 	height: 374px;
-	position: relative;
     float: left;
     padding: 45px 0 0;
     background: #fff;
     border-top: 1px solid #e0e0e0;
     text-align: center;
-
+	position: relative;
+	overflow: hidden;
 }
-.home-main .container .content .content-list li{
+.home-main .container .content .contentlist li{
 	transition: all,0.5s;
 }
-.home-main .container .content .content-list li:hover{
-	box-shadow: -4px 7px 20px 0px rgba(75,75,75,0.3);
+.home-main .container .content .contentlist li:hover{
+	box-shadow: -4px 7px 20px 0px rgba(75,75,75,1);
 	transform: translate(0, -3px);
 }
-.home-main .container .content .content-list li h2{
+.home-main .container .content .contentlist li .son{
+	width: 296px;
+	height: 374px;
+    padding: 45px 0 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+	position:absolute;
+	top: 0;
+	left:0;
+}
+.home-main .container .content .contentlist li .dayu{
+	width: 20px;
+	height: 28px;
+	padding:10px 0;
+	background: #e0e0e0;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.home-main .container .content .contentlist li .xiaoyu{
+	width: 20px;
+	height: 28px;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #E2E2E2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.home-main .container .content .contentlist li .son h2{
 	width: 276px;
 	height: 24px;
 	margin: 0 10px 18px;
@@ -1855,7 +1927,7 @@ body{
     font-weight: 400;
     color: #ffac13;
 }
-.home-main .container .content .content-list li .text1{
+.home-main .container .content .contentlist li .son .text1{
 	display: block;
 	width: 256px;
 	height: 25px;
@@ -1864,7 +1936,7 @@ body{
     margin: 0 auto;
     color: #333;
 }
-.home-main .container .content .content-list li .text2{
+.home-main .container .content .contentlist li .son .text2{
 	display: block;
 	height: 40px;
 	margin: 0 48px 10px;
@@ -1873,20 +1945,21 @@ body{
     overflow: hidden;
     color: #b0b0b0;
 }
-.home-main .container .content .content-list li .text3{
+.home-main .container .content .contentlist li .son .text3{
 	display: block;
 	height: 21px;
     margin: 0 10px 15px;
     font-size: 14px;
-   color: #333;
+   	color: #333;
 }
-.home-main .container .content .content-list li .box{
+/* .home-main .container .content .contentlist li .box{
 	width: 96px;
 	height: 30px;
-	padding: 0 100px;
-	margin-top: 25px;
+	position: absolute;
+	bottom: 10px;
+	left: 100px;
 }
-.home-main .container .content .content-list li .box .spot{
+.home-main .container .content .contentlist li .box .spot{
 	width: 4px;
 	height: 4px;
 	border: 2px solid #B0B0B0;
@@ -1895,14 +1968,19 @@ body{
 	margin: 0 12px;
 	line-height: 30px;
 	border-radius: 50%;
-}
-.home-main .container .content .content-list li .box_{
+} */
+/* .home-main .container .content .contentlist li .box .spot:first-child{
+	background: white;
+	border-color: #FF6700;
+} */
+.home-main .container .content .contentlist li .box{
 	width: 156px;
 	height: 30px;
-	padding: 0 70px;
-	margin-top: 25px;
+	position: absolute;
+	bottom: 10px;
+	left: 70px;
 }
-.home-main .container .content .content-list li .box_ .spot{
+.home-main .container .content .contentlist li .box .spot{
 	width: 4px;
 	height: 4px;
 	border: 2px solid #B0B0B0;
@@ -1912,27 +1990,31 @@ body{
 	line-height: 30px;
 	border-radius: 50%;
 }
-.home-main .container .content .content-list li .box .spot:hover{
+/* .home-main .container .content .contentlist li .box .spot:first-child{
+	background: white;
+	border-color: #FF6700;
+} */
+.home-main .container .content .contentlist li .box .spot:hover{
 	background: #ffac13;
 	border-color: #ffac13;
 }
-.home-main .container .content .content-list li .box_ .spot:hover{
+.home-main .container .content .contentlist li .box .spot:hover{
 	background: #ffac13;
 	border-color: #ffac13;
 }
-.home-main .container .content .content-list li img{
+.home-main .container .content .contentlist li .son img{
 	margin: 0 auto;
 }
-.home-main .container .content .content-list li:nth-child(2),.home-main .container .content .content-list li:nth-child(3),.home-main .container .content .content-list li:nth-child(4){
+.home-main .container .content .contentlist li:nth-child(2),.home-main .container .content .contentlist li:nth-child(3),.home-main .container .content .contentlist li:nth-child(4){
 	margin-left: 14px;
 }
-.home-main .container .content .content-list span{
+.home-main .container .content .contentlist span{
 	width: 6px;
 	height: 6px;
 	font-size: 4px;
 	color: #B0B0B0;
 }
-.home-main .container .content .content-list span:hover{
+.home-main .container .content .contentlist span:hover{
 	color: #ffac13;
 }
 /*内容部分结束*/
