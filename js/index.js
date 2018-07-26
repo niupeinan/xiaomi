@@ -284,7 +284,7 @@ window.onload=function () {
 
         // value.onmouseleave=function () {
         //     t=setInterval(move,3000);
-        // }
+        // } 
 
         function move1() {
             next--;
@@ -333,14 +333,14 @@ window.onload=function () {
                     animate(item[now],{left:-width});
                     animate(item[index],{left:0});
                     element.style.background="#fff";
-                    now=index;
+                    next=now=index;
                 }
                 else if(index<now){
                     item[index].style.left=-width+"px";
                     animate(item[now],{left:width});
                     animate(item[index],{left:0});
                     element.style.background="#fff";
-                    now=index;
+                    next=now=index;
                 }
                 else{
                     element.style.background="#fff";
