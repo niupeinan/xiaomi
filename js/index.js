@@ -54,18 +54,18 @@ window.onload=function () {
     // let wraper=home.getElementsByClassName("waper")[0];
     // let back=home.getElementsByClassName("ui-prev")[0];
     // let forward=home.getElementsByClassName("ui-next")[0];
-    // let lis=wraper.getElementsByTagName("a");
+    // let lies=wraper.getElementsByTagName("a");
     // let num=0;
     // let t=setInterval(move,3000);
     // function move(){
     //     num++;
-    //     if(num==lis.length){
+    //     if(num==lies.length){
     //         num=0;
     //     }
-    //     for(let j=0;j<lis.length;j++){
-    //         lis[j].style.zIndex=5;
+    //     for(let j=0;j<lies.length;j++){
+    //         lies[j].style.zIndex=5;
     //     }
-    //     lis[num].style.zIndex=10;
+    //     lies[num].style.zIndex=10;
     // }
     // banner.onmouseenter=function(){
     //     clearInterval(t);
@@ -76,12 +76,12 @@ window.onload=function () {
     // function move1(){
     //     num--;
     //     if(num<0){
-    //         num=lis.length-1;
+    //         num=lies.length-1;
     //     }
-    //     for(let j=0;j<lis.length;j++){
-    //         lis[j].style.zIndex=5;
+    //     for(let j=0;j<lies.length;j++){
+    //         lies[j].style.zIndex=5;
     //     }
-    //     lis[num].style.zIndex=10;
+    //     lies[num].style.zIndex=10;
     // }
     // back.onclick=function(){
     //     move1();
@@ -105,15 +105,11 @@ window.onload=function () {
         if(next==list.length){
             next=0;
         }
-        // for(let i=0;i<list.length;i++){
-        //     btn[i].style.background="#8F8D88";
-        // }
         list[next].style.left=width+"px";
         animate(list[now],{left:-width});
         animate(list[next],{left:0},function(){
             flag=true;
         });
-        // btn[next].style.background="#fff";
         btn[next].classList.add("hot");
         btn[now].classList.remove("hot");
         now=next;
@@ -123,9 +119,6 @@ window.onload=function () {
         if(next<0){
             next=list.length-1;
         }
-        // for(let i=0;i<list.length;i++){
-        //     btn[i].style.background="#8F8D88";
-        // }
         btn[next].classList.add("hot");
         btn[now].classList.remove("hot");
         list[next].style.left=-width+"px";
@@ -133,7 +126,6 @@ window.onload=function () {
         animate(list[next],{left:0},function(){
             flag=true;
         });
-        // btn[next].style.background="#fff";
         now=next;
     }
     banner.onmouseenter=function(){
@@ -142,7 +134,6 @@ window.onload=function () {
     banner.onmouseleave=function(){
         t=setInterval(move,2000);
     }
-    // let flag=true;
     forward.onclick=function(){
         if(flag==false){
             return;
@@ -227,6 +218,31 @@ window.onload=function () {
     let widths=parseInt(getComputedStyle(right,null).width);
     let lis=box.querySelectorAll(".right a");
     let time=0;
+    function times(){
+        let arr=[];
+        let now=new Date();
+        let future=new Date(2018,7,2,24,0,0);
+        let time=(Math.floor((future.getTime()-now.getTime())/1000));
+        let hour=(Math.floor(time/60/60));
+        time=time%(60*60);
+        arr.push(hour);
+        let minute=(Math.floor(time/60));
+        time=time%60;
+        arr.push(minute);
+        let second=(Math.floor(time%60));
+        arr.push(second);
+        return arr;
+    }
+    setInterval(fn,1000);
+    fn();
+    function fn(){
+        let box2=box.querySelectorAll(".left .box");
+        let arr=times();
+        box2.forEach(function(element,index){
+            element.innerText=arr[index];
+        })
+
+    }
     button[1].onclick=function(){
         time++;
         if(time==2){
@@ -241,7 +257,32 @@ window.onload=function () {
         }
         right.style.transform="translateX("+(-widths*time)/2+"px)";
     }
+    //推荐展示
+    let tuijian=document.querySelector(".tuijian .boxbd");
+    let box3=tuijian.querySelectorAll(".box");
+    let boxhd=document.querySelector(".tuijian .boxhd");
+    let butt=boxhd.querySelectorAll("button");
     
+    let timess=0;
+    let width3=parseInt(getComputedStyle(tuijian,null).width);
+    console.log(butt,tuijian,width3);
+    butt[1].onclick=function(){
+        
+        timess++;
+        if(timess==4){
+            timess=3;
+        }
+        // tuijian.style.transform="translateX("+(-width3*time)/4+"px)";
+        tuijian.style.transform=`translateX(${-width3*timess/4}px)`
+    }       
+    butt[0].onclick=function(){
+        timess--;
+        if(timess==-1){
+            timess=0;
+        }
+        tuijian.style.transform="translateX("+(-width3*timess)/4+"px)";
+    }
+
     //内容展示：
     let list1=document.querySelector(".content li");
     let list2=document.querySelectorAll(".content li")[1];
