@@ -615,6 +615,11 @@ body{
 	background-color: white;
 	border: 1px solid #E0E0E0;
 	box-sizing: border-box;
+	outline: none;
+	color:#B0B3B9;
+}
+.home-first .flash-shop .boxhd .btn button:first-child{
+	color:#E0E0E0;
 }
 .btn button:first-child{
 	border-right: 0;

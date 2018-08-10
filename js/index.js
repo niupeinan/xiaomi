@@ -243,19 +243,36 @@ window.onload=function () {
         })
 
     }
+    button[1].onmouseenter=function(){
+        button[1].style.color="#ff6700";
+    }
+     button[1].onmouseleave=function(){
+        button[1].style.color="#E0E0E0";
+    }
+    button[0].onmouseenter=function(){
+        button[0].style.color="#ff6700";
+    }
+     button[0].onmouseleave=function(){
+        button[0].style.color="#E0E0E0";
+    }
     button[1].onclick=function(){
         time++;
         if(time==2){
             time=1;
         }
         right.style.transform="translateX("+(-widths*time)/2+"px)";
-    }       
+        button[1].style.color="#ff6700";
+        button[0].style.color="#B0B3B9";
+    }  
+    button[1].onmouseenter=function(){}     
     button[0].onclick=function(){
         time--;
         if(time==-1){
             time=0;
         }
         right.style.transform="translateX("+(-widths*time)/2+"px)";
+        button[0].style.color="#ff6700";
+        button[1].style.color="#B0B3B9";
     }
     //推荐展示
     let tuijian=document.querySelector(".tuijian .boxbd");
