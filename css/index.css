@@ -2065,6 +2065,13 @@ body{
 	line-height: 58px;
 	color: #424242;
 }
+.home-main .container .home-video .title .more span{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #B0B0B0;
+	color: #fff;
+}
 .home-main .container .home-video .title .more:hover{
 	color: #ff6700;
 }

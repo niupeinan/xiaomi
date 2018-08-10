@@ -19,7 +19,7 @@ window.onload=function () {
     let navitem=bigbox.getElementsByClassName("navitem");
     let knowmore=bigbox.getElementsByClassName("knowmore");
     for (let i=0;i<navitem.length;i++){
-        navitem[i].onmouseenter=function () {
+        navitem[i].onmouseenter=function() {
             for(let j=0;j<navitem.length;j++){
                 knowmore[j].style.display="none";
             }
@@ -221,7 +221,7 @@ window.onload=function () {
     function times(){
         let arr=[];
         let now=new Date();
-        let future=new Date(2018,7,2,24,0,0);
+        let future=new Date(2018,7,10,24,0,0);
         let time=(Math.floor((future.getTime()-now.getTime())/1000));
         let hour=(Math.floor(time/60/60));
         time=time%(60*60);
